@@ -7,6 +7,9 @@ def extract_ip(text):
     match = re.search(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', str(text))
     return match.group(0) if match else None
 
+def extract_emails(text):
+    return re.findall(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', str(text))
+
 def detect_patterns(text):
     patterns = {
         "SQLi": r"(UNION|SELECT|INSERT|UPDATE|DROP|WHERE|--|\*|\')",
