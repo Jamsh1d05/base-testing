@@ -8,7 +8,7 @@ from bot.database.db import Database
 logging.basicConfig(level=logging.INFO)
 
 # Configurable settings
-MAX_BULLETINS_PER_MESSAGE = 5  
+MAX_BULLETINS_PER_MESSAGE = 4  
 NOTIFICATION_INTERVAL = 30
 
 class NotificationService:
